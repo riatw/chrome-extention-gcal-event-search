@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin: 0;
+	padding: 0;
+}
+
+#wrap {
+	padding: 20px;
+	min-width: 500px;
+}
+
+.m-list-form {
+
+}
+.m-list-form li {
+	margin-top: 15px;
+}
+.m-list-form li:first-child {
+	margin-top: 0;
+}
+.m-list-form li label {
+	display: block;
+	margin-bottom: 5px;
+}
+.m-list-form li input,
+.m-list-form li textarea,
+.m-list-form select {
+	width: 100%;
+}
+.m-list-form li button {
+	display: block;
+	background: orange;
+	color: #fff;
+	padding: 20px;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	text-align: left;
+}
