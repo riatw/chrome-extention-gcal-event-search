@@ -2,17 +2,14 @@
 	"manifest_version": 2,
 	"name": "Google Calendar Event Search",
 	"description": "Googleカレンダーのマイカレンダーの中からイベントを検索します。",
-	"version": "1.0.2",
+	"version": "1.0.5",
 	"minimum_chrome_version": "29",
 	"icons": {
-		"16": "images/icon/icon_16.png",
-		"48": "images/icon/icon_48.png",
 		"128": "images/icon/icon_128.png"
 	},
 	"browser_action": {
 		"default_icon": {
-			"19": "images/icon/icon_19.png",
-			"38": "images/icon/icon_38.png"
+			"128": "images/icon/icon_128.png"
 		},
 		"default_title": "Google Calendar Events to Text",
 		"default_popup": "popup.html"
@@ -24,11 +21,11 @@
 		"https://www.googleapis.com/*",
 		"https://accounts.google.com/o/oauth2/token",
 		"https://www.googleapis.com/",
-		"http://riatw.me/*"
+		"https://riatw.me/*"
 	],
 	"content_scripts": [
 		{
-			"matches": ["http://riatw.me/_extension_oauth/index.html*"],
+			"matches": ["https://riatw.me/_extension_oauth/index.html*"],
 			"js": ["oauth2/oauth2_inject.js"],
 			"run_at": "document_start"
 		}

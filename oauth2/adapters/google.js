@@ -13,7 +13,7 @@ OAuth2.adapter('google', {
   },
 
   redirectURL: function(config) {
-    return 'http://riatw.me/_extension_oauth/index.html';
+    return 'https://riatw.me/_extension_oauth/index.html';
     // return 'https://www.google.com/robots.txt';
   },
 

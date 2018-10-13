@@ -129,10 +129,10 @@ $(document).ready(function(){
 								continue;
 							}
 
-							stash += formatDate( new Date(item.start.dateTime), 'YYYY/MM/DD ') + formatDate( new Date(item.start.dateTime), 'hh:mm') + "～" + formatDate( new Date(item.end.dateTime), 'hh:mm') + " " + data.summary + " " + item.summary + "\n";
+							stash += formatDate( new Date(item.start.dateTime), 'YYYY/MM/DD') + "\t" + formatDate( new Date(item.start.dateTime), 'hh:mm') + "～" + formatDate( new Date(item.end.dateTime), 'hh:mm') + "\t" + data.summary + "\t" + item.summary + "\n";
 						}
 
-						$("#buff").text( $("#buff").text() + "\n" + stash);
+						$("#buff").text( $("#buff").text() + stash);
 						$("#buff").text( $("#buff").text().replace(/\n\n/gm,"\n") );
 					}
 				});
