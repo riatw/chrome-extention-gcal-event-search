@@ -113,7 +113,8 @@ $(document).ready(function(){
 			for ( var calnum = 0; calnum < calendarIds.length; calnum++ ) {
 				$.ajax({
 					type: "GET",
-					url: "https://www.googleapis.com/calendar/v3/calendars/" + calendarIds[calnum] + "/events?singleEvents=true&orderBy=startTime&timeMin=" + timeMin + "&timeMax=" + timeMax + "&timeZone=Asia/Tokyo" + "&q=" + query,
+					// url: "https://www.googleapis.com/calendar/v3/calendars/" + calendarIds[calnum] + "/events?singleEvents=true&orderBy=startTime&timeMin=" + timeMin + "&timeMax=" + timeMax + "&timeZone=Asia/Tokyo" + "&q=" + query,
+					url: "https://www.googleapis.com/calendar/v3/calendars/" + calendarIds[calnum] + "/events?singleEvents=true&orderBy=startTime&timeMin=" + timeMin + "&timeMax=" + timeMax + "&timeZone=Asia/Tokyo",
 					dataType: "json",
 					headers: {
 						'Authorization': 'Bearer ' + google.getAccessToken()
@@ -126,6 +127,10 @@ $(document).ready(function(){
 							var item = items[i];
 
 							if ( new Date(item.start.dateTime).toString() === "Invalid Date" ) {
+								continue;
+							}
+
+							if ( item.summary.indexOf(query) == -1 ) {
 								continue;
 							}
 
